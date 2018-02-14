@@ -73,6 +73,15 @@ public class Colosseum {
      */
     public static Pokemon buildPokemon() {
         Pokemon tempPokemon = new Pokemon();
+        while (true) {
+            int x = myScan.nextInt();
+            if (x <= MAX_HIT_POINTS && x >= 1) {
+                tempPokemon.hitPoints = x;
+                break;
+            } else {
+                System.out.print("Sorry. Hit points must be between 1 and 50");
+            }
+        }
         return tempPokemon;
     }
 
